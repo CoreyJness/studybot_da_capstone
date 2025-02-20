@@ -8,40 +8,35 @@ from bs4 import BeautifulSoup
 import time
 
 
-
 #Use Selenium to drive chrome
-def scrape_website(website, topic):
+def scrape_website(website, topic,):
     print("Launching chrome browswer")
     
     chrome_driver_path = "./chromedriver.exe"
     options = webdriver.ChromeOptions()
     driver = webdriver.Chrome(service=Service(chrome_driver_path), options=options)
     
-    try:
-        driver.get(website)
-        print("Page loaded...")
-
-        # Locate the search bar and enter the topic
-        search_bar = WebDriverWait(driver, 10).until(
-            EC.presence_of_element_located((By.XPATH, "//input[@type='text']"))
-        )
-        search_bar.send_keys(topic)
-
-        # Locate and click the search button
-        search_button = WebDriverWait(driver, 10).until(
-            EC.element_to_be_clickable((By.ID, "edit-submit"))
-        )
-        search_button.click()
-
-        # Wait for results to load
-        time.sleep(5)
-
-        html = driver.page_source
-        return html
-    finally:
-        driver.quit()
-      
+    driver.get("https://yahoo.com")
+    
+    WebDriverWait(driver, 5).until(
+        EC.presence_of_element_located((By.XPATH, "//*[@id='uh-sbq']"))
+    )
         
+    input_element = driver.find_element(By.XPATH, "//*[@id='uh-sbq']")
+    input_element.send_keys(topic + website + Keys.ENTER)
+   
+    WebDriverWait(driver, 5).until(
+        EC.presence_of_element_located((By.PARTIAL_LINK_TEXT, topic))
+    )
+    
+    link = driver.find_element(By.PARTIAL_LINK_TEXT, topic)
+    link.click()
+    time.sleep(10)
+    
+    
+    driver.quit
+
+    
 #Remove the data using BeautifulSoup        
 def extract_body_content(html_content):
     soup = BeautifulSoup(html_content, 'html.parser')
