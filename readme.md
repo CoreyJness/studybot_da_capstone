@@ -20,8 +20,11 @@ The original framework for this project is based on the research paper, *"Questi
 - **Experimentation & Analysis**: Jupyter Notebook for iterative development and evaluation  
 
 ## **Data**  
-The original dataset was the RACE dataset mentioned in the paper, with difficulty levels ranging from easy(Middle School) to hard(High School).  Once able to replicate the model (99% in testing versus the 97% stated in the paper), additional classification questions were necessary.
-The latest update includes a custom dataset of Common Core Standard questions sorted by grade level.
+RACE Dataset --> https://huggingface.co/papers/1704.04683
+The original dataset used was the RACE dataset mentioned in the paper, with difficulty levels ranging from easy(Middle School) to hard(High School).  Once able to replicate the model (99% in testing versus the 97% stated in the paper), additional classification questions were necessary.
+
+The latest update includes a custom dataset of Common Core Standard questions sorted by grade level.  These questions come from a variety of textbooks that align with common core state standards.
+QxGrade Dataset --> 
 
 
 ## **Future Plans**  
