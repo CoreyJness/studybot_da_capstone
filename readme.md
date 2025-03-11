@@ -26,7 +26,7 @@ RACE Dataset --> https://huggingface.co/papers/1704.04683
 
 The latest update includes a custom dataset of Common Core Standard questions sorted by grade level.  These questions come from a variety of textbooks that align with common core state standards.
 
-QxGrade Dataset --> 
+QxGrade Dataset --> https://www.kaggle.com/datasets/coreyjjness94/qxgrade-dataset
 
 
 ## **Future Plans**  
