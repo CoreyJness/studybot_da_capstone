@@ -43,3 +43,5 @@ This project is actively evolving, with ongoing improvements in feature selectio
 ## **Contact**  
 
 For questions, collaborations, or contributions, reach out via [GitHub](https://github.com/coreyjness).  
+
+Notice:  This project is for educational purposes only.  The data used to train this model is copyrighted and only used under fair usage rights.  
