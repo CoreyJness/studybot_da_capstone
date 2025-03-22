@@ -29,13 +29,16 @@ The latest update includes a custom dataset of Common Core Standard questions so
 
 QxGrade Dataset --> https://www.kaggle.com/datasets/coreyjjness94/qxgrade-dataset
 
+Using a multiclass regression logarithm, the model was trained until it tested at 75% accuracy on unseen data. 
+
+Studybot model --> 
+
 
 ## **Future Plans**  
 
-- **Fine-tuning with Custom Data**: Continue training the model using the Common Core dataset to improve domain-specific accuracy.  
 - **Feature Engineering Improvements**: Explore additional linguistic and cognitive features to enhance classification precision.  
 - **Model Comparisons**: Evaluate different transformer-based and deep learning models for optimized performance.  
-- **Application & Deployment**: Investigate potential real-world applications, such as an adaptive learning assistant or an educational assessment tool.  
+- **Application & Deployment**: Investigate potential real-world applications, such as an educational pedagogy assessment tool.  
 
 ## **Project Status**  
 
