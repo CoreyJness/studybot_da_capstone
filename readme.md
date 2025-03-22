@@ -20,7 +20,9 @@ The original framework for this project is based on the research paper, *"Questi
 - **Experimentation & Analysis**: Jupyter Notebook for iterative development and evaluation  
 
 ## **Data**  
-The original dataset used was the RACE dataset mentioned in the paper, with difficulty levels ranging from easy(Middle School) to hard(High School).  Once able to replicate the model (99% in testing versus the 97% stated in the paper), additional classification questions were necessary.
+The original dataset used was the RACE dataset mentioned in the paper, with difficulty levels ranging from easy(Middle School) to hard(High School).  Once able to replicate the model, additional classification questions were needed.  Using textbooks available in pdf format online, I removed the questions from the books and scraped them to sort by grade level.  Current model accuracy stands at >70%
+
+
 
 RACE Dataset --> https://huggingface.co/papers/1704.04683
 
