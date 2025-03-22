@@ -15,13 +15,12 @@ The original framework for this project is based on the research paper, *"Questi
 
 ## **Technologies Used**  
 
-- **Programming Languages & Libraries**: Python (Pandas, Jupyter, PyTorch, NumPy)  
+- **Programming Languages & Libraries**: Python (Pandas, Jupyter, PyTorch, NumPy, SciKit Learn)  
 - **Machine Learning Models**: BERT, DUMA, and other NLP-based classification  
-- **Experimentation & Analysis**: Jupyter Notebook for iterative development and evaluation  
+- **Experimentation & Analysis**: Google Colab and Jupyter Notebook for iterative development and evaluation  
 
 ## **Data**  
 The original dataset used was the RACE dataset mentioned in the paper, with difficulty levels ranging from easy(Middle School) to hard(High School).  Once able to replicate the model, additional classification questions were needed.  Using textbooks available in pdf format online, I removed the questions from the books and scraped them to sort by grade level.  Current model accuracy stands at >70%
-
 
 
 RACE Dataset --> https://huggingface.co/papers/1704.04683
