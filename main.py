@@ -1,4 +1,4 @@
-mport streamlit as st
+import streamlit as st
 import torch
 from transformers import AutoTokenizer, BertModel, BertConfig
 from predictor import predict_grade_level
@@ -21,7 +21,8 @@ dual_bert.encoder.load_state_dict(pretrained_bert.encoder.state_dict(), strict=F
 dual_bert.pooler = pretrained_bert.pooler
 
 # Initialize classifier
-model = BertClassifier(bert=dual_bert, hidden_dim=768, num_classes=10)
+model = BertClassifier(bert=dual_bert, hidden_dim=64, num_classes=10)
+
 
 # Load trained weights
 state_dict = torch.load("Bert_Classifier.pt", map_location=torch.device("cpu"))
@@ -35,7 +36,7 @@ model.eval()
 def load_model_and_tokenizer():
     tokenizer = AutoTokenizer.from_pretrained('bert-base-uncased')
     model = BertModel.from_pretrained("bert-base-uncased")
-    classifier = BertClassifier(bert=model, hidden_dim=64, num_classes=10)
+    classifier = model
     classifier.load_state_dict(torch.load("Bert_Classifier.pt", map_location=torch.device("cpu")))
     classifier.eval()
     return classifier, tokenizer

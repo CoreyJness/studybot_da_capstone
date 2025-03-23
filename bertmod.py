@@ -1,3 +1,4 @@
+import torch
 import torch.nn as nn
 import torch.nn.functional as F
 from transformers.models.bert.modeling_bert import BertIntermediate, BertOutput, BertEncoder, BertSelfAttention, BertSelfOutput, BertModel, BertConfig
@@ -73,9 +74,13 @@ class BertClassifier(nn.Module):
     def __init__(self, bert, hidden_dim=768, num_classes=10): 
         super(BertClassifier, self).__init__()
         self.bert = bert
-        self.fc = nn.Linear(768, num_classes)
+        self.classifier = nn.Sequential(
+            nn.Linear(hidden_dim, 128),
+            nn.ReLU(),
+            nn.Linear(128, num_classes)
+        )
 
     def forward(self, input_ids, attention_mask):
         outputs = self.bert(input_ids=input_ids, attention_mask=attention_mask)
-        pooled_output = outputs[0][:, 0, :]  # CLS token representation
-        return self.fc(pooled_output)
+        pooled_output = outputs[0][:, 0, :]  # CLS token
+        return self.classifier(pooled_output)
