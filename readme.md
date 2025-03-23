@@ -8,6 +8,7 @@ The original framework for this project is based on the research paper, *"Questi
 PyTorch was used wherever possible, and when functions were taken from PyTorch Docs it is notated in the code.  
 <br>
 <br>
+
 ## **Features**  
 - **Question Preprocessing**: Tokenization, stopword removal, and feature extraction.  
 - **Custom Dataset Integration**: Implementation of a dataset of Common Core Standard questions, categorized by grade level.  
@@ -15,12 +16,14 @@ PyTorch was used wherever possible, and when functions were taken from PyTorch D
 - **Evaluation Metrics**: Accuracy, loss, reproducibility, and comparison across different difficulty levels.  
 <br>
 <br>
+
 ## **Technologies Used**  
 - **Programming Languages & Libraries**: Python (Pandas, Jupyter, PyTorch, SciKit Learn)  
 - **Machine Learning Models**: BERT, DUMA, Multiclass Regression, and other NLP-based classification  
 - **Experimentation & Analysis**: Google Colab and Jupyter Notebook for iterative development and evaluation  
 <br>
 <br>
+
 ## **Data**  
 The original dataset used was the RACE dataset mentioned in the paper, with difficulty levels ranging from easy (Middle School) to hard (High School).  Once able to replicate the model, additional classification questions were needed. 
 - RACE Dataset --> https://huggingface.co/papers/1704.04683
@@ -34,16 +37,19 @@ Using a multiclass regression logarithm, the model was trained until it tested a
 - Studybot model --> 
 <br>
 <br>
+
 ## **Future Plans**  
 - **Feature Engineering Improvements**: Explore additional features to enhance classification using Bloom's Taxonomy.   
 - **Model Comparisons**: Evaluate different transformer-based and deep learning models for optimized performance.  
 - **Application & Deployment**: Investigate potential real-world applications, such as an educational pedagogy assessment tool.  
 <br>
 <br>
+
 ## **Project Status**  
 This project is actively evolving, with ongoing improvements in feature selection, model tuning, and dataset integration for enhanced accuracy and real-world applicability.  
 <br>
 <br>
+
 ## **Contact**  
 For questions, collaborations, or contributions, reach out via [GitHub](https://github.com/coreyjness).  
 <br>
