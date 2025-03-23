@@ -3,6 +3,7 @@ import torch.nn as nn
 import torch.nn.functional as F
 from transformers.models.bert.modeling_bert import BertIntermediate, BertOutput, BertEncoder, BertSelfAttention, BertSelfOutput, BertModel, BertConfig, BertPooler
 
+##This is just copied and pasted out of the capstone ipynb.  Explanation will be in better detail there. 
 
 ##This implements a copy of the original attention mechnism to run simultaneously, then at the end, the outputs are joined together
 class DualBertAttention(nn.Module):
