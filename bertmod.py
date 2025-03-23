@@ -1,7 +1,7 @@
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
-from transformers.models.bert.modeling_bert import BertIntermediate, BertOutput, BertEncoder, BertSelfAttention, BertSelfOutput, BertModel, BertConfig
+from transformers.models.bert.modeling_bert import BertIntermediate, BertOutput, BertEncoder, BertSelfAttention, BertSelfOutput, BertModel, BertConfig, BertPooler
 
 
 ##This implements a copy of the original attention mechnism to run simultaneously, then at the end, the outputs are joined together
@@ -66,21 +66,36 @@ class DualBertModel(BertModel):
     def __init__(self, config):
         super().__init__(config)
         self.encoder = DualBertEncoder(config)
+        self.pooler = BertPooler(config)  # Add this line
+
+    def forward(self, input_ids=None, attention_mask=None, token_type_ids=None, **kwargs):
+        # Follow the same structure as the original BertModel
+        outputs = super().forward(input_ids=input_ids,
+                                  attention_mask=attention_mask,
+                                  token_type_ids=token_type_ids,
+                                  **kwargs)
+
+        sequence_output = outputs[0]
+        pooled_output = self.pooler(sequence_output)
+
+        return (sequence_output, pooled_output)
 
 
 ##Initialize a classifier between the 10 different options (3rd grade to 12th grade).
 
 class BertClassifier(nn.Module):
-    def __init__(self, bert, hidden_dim=768, num_classes=10): 
-        super(BertClassifier, self).__init__()
-        self.bert = bert
+    def __init__(self, bert_model, hidden_dim=64, output_dim=6):
+        super().__init__()
+        self.bert = bert_model
+        
         self.classifier = nn.Sequential(
-            nn.Linear(hidden_dim, 128),
+            nn.Linear(self.bert.config.hidden_size, hidden_dim),
             nn.ReLU(),
-            nn.Linear(128, num_classes)
+            nn.Linear(hidden_dim, output_dim)
         )
 
-    def forward(self, input_ids, attention_mask):
+    def forward(self, input_ids, attention_mask=None):
         outputs = self.bert(input_ids=input_ids, attention_mask=attention_mask)
-        pooled_output = outputs[0][:, 0, :]  # CLS token
-        return self.classifier(pooled_output)
+        cls_embedding = outputs[0][:, 0, :]  # outputs[0] = last_hidden_state
+        return self.classifier(cls_embedding)
+

@@ -69,7 +69,7 @@ Notice:  This project is for educational purposes only.  The data used to train 
 -  1. Download the dataset as QxGrade_Dataset.csv if you are training.  Download the model as Bert_Classifier.pt if you are deploying the model.
 <br>
 
--  2. Create a fork in the repository so you can access the notebook locally.  
+-  2. Create a fork in the repository and download the project to a studybot folder so you can access the notebook locally.  
 <br>
 
 - 3. Spin up the virtual environment specific to your system. 
