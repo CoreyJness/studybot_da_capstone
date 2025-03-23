@@ -6,7 +6,7 @@ This project focuses on developing a machine learning model to classify the diff
 The original framework for this project is based on the research paper, *"Question Difficulty Estimation Based on Attention Model for Question Answering"* by Hyun-Je Song, Su-Hwan Yoon, and Seong-Bae Park.  
 <br>
 PyTorch was used wherever possible, and when functions were taken from PyTorch Docs it is notated in the code.  
-<br>
+
 <br>
 
 ## **Features**  
@@ -14,29 +14,31 @@ PyTorch was used wherever possible, and when functions were taken from PyTorch D
 - **Custom Dataset Integration**: Implementation of a dataset of Common Core Standard questions, categorized by grade level.  
 - **Model Training**: Fine-tuning models for difficulty classification using both general and standardized educational content.  
 - **Evaluation Metrics**: Accuracy, loss, reproducibility, and comparison across different difficulty levels.  
-<br>
+
 <br>
 
 ## **Technologies Used**  
 - **Programming Languages & Libraries**: Python (Pandas, Jupyter, PyTorch, SciKit Learn)  
 - **Machine Learning Models**: BERT, DUMA, Multiclass Regression, and other NLP-based classification  
 - **Experimentation & Analysis**: Google Colab and Jupyter Notebook for iterative development and evaluation  
-<br>
+
 <br>
 
 ## **Data**  
 The original dataset used was the RACE dataset mentioned in the paper, with difficulty levels ranging from easy (Middle School) to hard (High School).  Once able to replicate the model, additional classification questions were needed. 
 - RACE Dataset --> https://huggingface.co/papers/1704.04683
-<br>
+
 <br>
 The latest update includes a custom dataset of Common Core Standard questions sorted by grade level.  These questions come from a variety of textbooks that align with common core state standards.
+
 - QxGrade Dataset --> https://www.kaggle.com/datasets/coreyjjness94/qxgrade-dataset
-<br>
+
 <br>
 Using a multiclass regression logarithm, the model was trained until it tested at 75% accuracy on unseen data. 
-- Studybot model --> 
+
+- Studybot model --> https://huggingface.co/Coreyjness/Studybot
 <br>
-<br>
+
 
 ## **Future Plans**  
 - **Feature Engineering Improvements**: Explore additional features to enhance classification using Bloom's Taxonomy.   
