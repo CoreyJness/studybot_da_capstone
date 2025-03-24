@@ -53,7 +53,7 @@ Follow the instructions below to train your own model or run the pre-trained cla
 
 2. **Clone the Repository and Set Up Your Environment**
    ```bash
-   git clone https://github.com/coreyjness/studybot.git
+   git clone https://github.com/coreyjness/studybot_da_capstone.git
    cd studybot
    ```
 
