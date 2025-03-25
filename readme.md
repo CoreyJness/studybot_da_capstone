@@ -64,9 +64,21 @@ Follow the instructions below to train your own model or run the pre-trained cla
    ```
 
 4. **Install Required Libraries**
-   ```bash
-   pip install -r requirements.txt
-   ```
+
+You can install the dependencies based on your system:
+
+🔹 CPU-only  
+If you're running on a regular laptop or desktop without a dedicated NVIDIA GPU (note: training will not run on most CPUs:
+
+```bash
+pip install -r requirements.txt
+```
+
+🔹 GPU Acceleration (NVIDIA with CUDA 11.8)
+
+```bash
+pip install -r requirements-gpu.txt
+```
 
 5. **Launch Jupyter Notebook from the command line to Train a New Model**
    ```bash
