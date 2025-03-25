@@ -47,17 +47,17 @@ Follow the instructions below to train your own model or run the pre-trained cla
 
 ### 🧰 Setup Instructions
 
-1. **Download the Resources**  
+### 1. **Download the Resources**  
    - If training: download `QxGrade_Dataset.csv` from [Kaggle](https://www.kaggle.com/datasets/coreyjjness94/qxgrade-dataset)  
    - If deploying: download `Bert_Classifier.pt` from [Hugging Face](https://huggingface.co/Coreyjness/Studybot)
 
-2. **Clone the Repository and Set Up Your Environment**
+### 2. **Clone the Repository and Set Up Your Environment**
    ```bash
    git clone https://github.com/coreyjness/studybot_da_capstone.git
    cd studybot
    ```
 
-3. **(Optional) Create and Activate a Virtual Environment**
+### 3. **(Optional) Create and Activate a Virtual Environment**
    ```bash
    python -m venv venv
    source venv/bin/activate  # On Windows: venv\Scripts\activate
@@ -85,13 +85,13 @@ Follow the instructions below to train your own model or run the pre-trained cla
 
    This will allow the model to train and execute correctly in the cloud.
 
-5. **Launch Jupyter Notebook to Train a New Model**
+### 5. **Launch Jupyter Notebook to Train a New Model**
 
    ```bash
    jupyter notebook
    ```
 
-6. **Train the Classifier**
+### 6. **Train the Classifier**
    - Open `capstonev2.ipynb`
    - Run through the notebook to load and preprocess the dataset.  Save the resulting model as `Bert_Classifier.pt`
    - For proper training use 20 epochs.  For demonstration purposes, use 2-3.
