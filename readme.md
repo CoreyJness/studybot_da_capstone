@@ -65,7 +65,7 @@ Follow the instructions below to train your own model or run the pre-trained cla
 
 ### 4. **Install Required Libraries**
 
-    **GPU Only**
+   **GPU Only**
 
    If you're running on a local machine with a dedicated **NVIDIA GPU**, you can install the required packages using:
 
@@ -77,7 +77,7 @@ Follow the instructions below to train your own model or run the pre-trained cla
 
    ---
 
-    **No GPU? Use Google Colab**
+   **No GPU? Use Google Colab**
 
    If you **don’t have CUDA capabilities locally**, upload the notebook to [Google Colab](https://colab.research.google.com/) and select the **T4 GPU runtime** under:
 
