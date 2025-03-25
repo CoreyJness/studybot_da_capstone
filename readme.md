@@ -68,7 +68,7 @@ Follow the instructions below to train your own model or run the pre-trained cla
    pip install -r requirements.txt
    ```
 
-5. **Launch Jupyter Notebook to Train a New Model**
+5. **Launch Jupyter Notebook from the command line to Train a New Model**
    ```bash
    jupyter notebook
    ```
