@@ -50,23 +50,21 @@ Follow the instructions below to train your own model or run the pre-trained cla
 1. **Download the Resources**  
    - If training: download `QxGrade_Dataset.csv` from [Kaggle](https://www.kaggle.com/datasets/coreyjjness94/qxgrade-dataset)  
    - If deploying: download `Bert_Classifier.pt` from [Hugging Face](https://huggingface.co/Coreyjness/Studybot)
-<br>
+
 2. **Clone the Repository and Set Up Your Environment**
    ```bash
    git clone https://github.com/coreyjness/studybot_da_capstone.git
-   cd studybot_da_capstone
+   cd studybot
    ```
-<br>
+
 3. **(Optional) Create and Activate a Virtual Environment**
    ```bash
    python -m venv venv
    source venv/bin/activate  # On Windows: venv\Scripts\activate
    ```
-<br>
-4. **Install Required Libraries**
 
-    You can install the dependencies based on your system:
-    
+4. **Install Required Libraries**
+  
     🔹 CPU-only  
     If you're running on a regular laptop or desktop without a dedicated NVIDIA GPU (note: training will not run on most CPUs:
     
@@ -79,16 +77,16 @@ Follow the instructions below to train your own model or run the pre-trained cla
     ```bash
     pip install -r requirements_gpu.txt
     ```
-<br>
-5. **Launch Jupyter Notebook from the command line to Train a New Model**
+
+5. **Launch Jupyter Notebook to Train a New Model**
    ```bash
    jupyter notebook
    ```
-<br>
+
 6. **Train the Classifier**
    - Open `capstonev2.ipynb`
    - Run through the notebook to load and preprocess the dataset, fine-tune the `DualBertModel`, and save the resulting model as `Bert_Classifier.pt`
-<br>
+
 7. **Launch the Classifier with Streamlit**
    ```bash
    streamlit run main.py
