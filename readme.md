@@ -63,29 +63,38 @@ Follow the instructions below to train your own model or run the pre-trained cla
    source venv/bin/activate  # On Windows: venv\Scripts\activate
    ```
 
-4. **Install Required Libraries**
-  
-    🔹 CPU-only  
-    If you're running on a regular laptop or desktop without a dedicated NVIDIA GPU (note: training will not run on most CPUs:
-    
-    ```bash
-    pip install -r requirements.txt
-    ```
-    
-    🔹 GPU Acceleration (NVIDIA with CUDA 11.8)
-    
-    ```bash
-    pip install -r requirements_gpu.txt
-    ```
+### 4. **Install Required Libraries**
+
+    **GPU Only**
+
+   If you're running on a local machine with a dedicated **NVIDIA GPU**, you can install the required packages using:
+
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+   > ⚠️ **Note:** Training will not work on most CPUs due to hardware limitations.
+
+   ---
+
+   💡 **No GPU? Use Google Colab**
+
+   If you **don’t have CUDA capabilities locally**, upload the notebook to [Google Colab](https://colab.research.google.com/) and select the **T4 GPU runtime** under:
+
+   > **Runtime → Change runtime type → T4 GPU
+
+   This will allow the model to train and execute correctly in the cloud.
 
 5. **Launch Jupyter Notebook to Train a New Model**
+
    ```bash
    jupyter notebook
    ```
 
 6. **Train the Classifier**
    - Open `capstonev2.ipynb`
-   - Run through the notebook to load and preprocess the dataset, fine-tune the `DualBertModel`, and save the resulting model as `Bert_Classifier.pt`
+   - Run through the notebook to load and preprocess the dataset.  Save the resulting model as `Bert_Classifier.pt`
+   - For proper training use 20 epochs.  For demonstration purposes, use 2-3.
 
 7. **Launch the Classifier with Streamlit**
    ```bash
