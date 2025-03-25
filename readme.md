@@ -96,7 +96,7 @@ Follow the instructions below to train your own model or run the pre-trained cla
    - Run through the notebook to load and preprocess the dataset.  Save the resulting model as `Bert_Classifier.pt`
    - For proper training use 20 epochs.  For demonstration purposes, use 2-3.
 
-### 7. **Launch the Classifier with Streamlit**
+### 7. **Launch the Classifier with Streamlit from Command Line inside Directory**
    ```bash
    streamlit run main.py
    ```
