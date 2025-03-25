@@ -77,7 +77,7 @@ pip install -r requirements.txt
 🔹 GPU Acceleration (NVIDIA with CUDA 11.8)
 
 ```bash
-pip install -r requirements-gpu.txt
+pip install -r requirements_gpu.txt
 ```
 
 5. **Launch Jupyter Notebook from the command line to Train a New Model**
