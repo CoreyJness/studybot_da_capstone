@@ -1,5 +1,5 @@
 
-# **Capstone Project: Question Difficulty Classification**
+# **Studybot: Question Difficulty Classification**
 
 ## **Overview**
 This project focuses on building a machine learning model that classifies the difficulty of a given question by predicting its **grade level (3rd–12th)**. Future enhancements aim to include **Bloom’s Taxonomy levels**, enabling the model to estimate cognitive complexity as well.
